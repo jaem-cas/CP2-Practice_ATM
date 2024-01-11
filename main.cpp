@@ -17,17 +17,18 @@ int main()
     cin >> menu;
 
     if (menu == 1) {
-        cout << "\nDEPOSIT\n";
+        cout << "\nDEPOSIT\n"
+            << "Enter amount to deposit: ";
     }
     else if (menu == 2) {
-        cout << "\nWITHDRAW\n";
+        cout << "\nWITHDRAW\n"
+            << "Enter amount to withdraw: ";
     }
     else if (menu == 3) {
 
         return 0;
     }
 
-    cout<< "Enter amount to deposit: ";
     cin >> inputValue;
    
     switch (menu) {
@@ -40,15 +41,16 @@ int main()
         balance -= inputValue;
     break;
 
-    default: cout << "Invalid choice";
+    default: cout << "\nInvalid choice";
     }
 
-    cout << "\n\nNew Balance: " << balance;
+    cout << "\nNew Balance: " << balance;
     
     cout << "\n\nDo you want to make another transaction?\n"
         << "Press any number to CONTINUE\n"
         << "Press 0 to EXIT\n";
     cin >> toContinue;
+    cout << "\n";
  
     } 
     while (toContinue != 0);
